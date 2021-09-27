@@ -1,0 +1,7 @@
+{
+  "name": "CreditoApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
