@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pps-proyectos": {
+      "hosting": {
+        "app": [
+          "pps-proyectos"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+ion-content {
+  --background: rgb(0 0 0 / 21%);
+}
+
+.centerFlex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteiner {
+  width: 100%;
+  height: auto;
+  background-color: #c1c8c7;
+  border-radius: 10px;
+  padding: 10px;
+  #btns {
+    display: flex;
+    justify-content: space-around;
+  }
+}

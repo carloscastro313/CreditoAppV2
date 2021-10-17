@@ -1,0 +1,57 @@
+<div id="register">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Registro</ion-title>
+      <ion-buttons slot="end">
+        <ion-button
+          expand="block"
+          fill="clear"
+          shape="round"
+          (click)="nav.back()"
+          ><ion-icon name="close-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input required formControlName="correo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Clave</ion-label>
+      <ion-input required formControlName="clave" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Perfil</ion-label>
+      <ion-select formControlName="perfil" placeholder="Seleccione perfil">
+        <ion-select-option value="admin">Admin</ion-select-option>
+        <ion-select-option value="usuario">Usuario</ion-select-option>
+        <ion-select-option value="tester">Tester</ion-select-option>
+        <ion-select-option value="invitado">Invitado</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Sexo</ion-label>
+      <ion-select formControlName="sexo" placeholder="Seleccione sexo">
+        <ion-select-option value="femenino">Femenino</ion-select-option>
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="no binario">No binario</ion-select-option>
+        <ion-select-option value="no especificado"
+          >No especificar</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+
+    <div id="btn_register">
+      <ion-button
+        block
+        color="primary"
+        type="submit"
+        [disabled]="registerForm.invalid || loading"
+      >
+        Registrarse
+      </ion-button>
+    </div>
+  </form>
+</div>

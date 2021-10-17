@@ -1,0 +1,34 @@
+<app-header title="CreditQR"></app-header>
+
+<ion-content color="light" class="ion-padding">
+  <ion-card id="credito">
+    <ion-card-header color="primary">
+      <ion-card-title>Crédito total</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div id="visor">
+        <h3>${{qr.cash}}</h3>
+        <ion-fab-button id="reset" color="danger" (click)="presentModal()">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-fab-button>
+      </div>
+
+      <ion-button id="addCash" (click)="qr.addCash()"> Cargar </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="historial">
+    <ion-card-header color="primary">
+      <ion-card-title>Historial de cargas</ion-card-title>
+    </ion-card-header>
+    <div class="list">
+      <ion-item *ngFor="let history of qr.history">
+        <ion-label
+          ><h5>${{history.value}}</h5>
+          <p>{{history.date | date}}</p></ion-label
+        >
+      </ion-item>
+    </div>
+  </ion-card>
+</ion-content>
